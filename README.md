@@ -3,13 +3,13 @@
 Run a CUPS print server on a remote machine to share USB printers over WiFi. Built primarily to use with Raspberry Pis as a headless server, but there is no reason this wouldn't work on `amd64` machines. Tested and confirmed working on a Raspberry Pi 3B+ (`arm/v7`) and Raspberry Pi 4 (`arm64/v8`).
 
 Container packages available from Docker Hub and Github Container Registry (ghcr.io)
-  - Docker Hub Image: `tartarismo/cups`
-  - GHCR Image: `ghcr.io/tartarismo/cups`
+  - Docker Hub Image: `tartarismo/cups-docker`
+  - GHCR Image: `ghcr.io/tartarismo/cups-docker`
 
 ## Usage
 Quick start with default parameters
 ```sh
-docker run -d -p 631:631 --device /dev/bus/usb --name cups tartarismo/cups
+docker run -d -p 631:631 --device /dev/bus/usb --name cups tartarismo/cups-docker
 ```
 
 Customizing your container
@@ -22,7 +22,7 @@ docker run -d --name cups \
     -e CUPSPASSWORD=password \
     -e TZ="Europe/Rome" \
     -v <persistent-config-folder>:/etc/cups \
-    tartarismo/cups
+    tartarismo/cups-docker
 ```
 > Note: :P make sure you use valid TZ string. Also changing the default username and password is highly recommended.
 
@@ -46,7 +46,7 @@ Environment variables that can be changed to suit your needs, use the `-e` tag
 version: "3"
 services:
     cups:
-        image: tartarismo/cups
+        image: tartarismo/cups-docker
         container_name: cups
         restart: unless-stopped
         ports:
