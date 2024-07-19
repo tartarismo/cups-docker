@@ -6,6 +6,10 @@ Container packages available from Docker Hub and Github Container Registry (ghcr
   - Docker Hub Image: `tartarismo/cups-docker`
   - GHCR Image: `ghcr.io/tartarismo/cups-docker`
 
+Status
+[![Publish CUPS Docker Image to Docker Hub](https://github.com/tartarismo/cups-docker/actions/workflows/publish-containers.yml/badge.svg)](https://github.com/tartarismo/cups-docker/actions/workflows/publish-containers.yml)
+[![Docker](https://github.com/tartarismo/cups-docker/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/tartarismo/cups-docker/actions/workflows/docker-publish.yml)
+
 ## Usage
 Quick start with default parameters
 ```sh
