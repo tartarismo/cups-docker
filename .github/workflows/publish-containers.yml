@@ -68,7 +68,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v4
         with:
-          images: ${{ secrets.DOCKER_USER }}/${{ github.repository }}
+          images: ${{ secrets.DOCKER_USER }}/cups-docker
           tags: |
             type=semver,pattern={{version}}
             type=raw,value={{date 'YY.MM.DD'}}
