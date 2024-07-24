@@ -29,6 +29,7 @@ RUN apt-get update -qq  && apt-get upgrade -qqy \
     hpijs-ppds \
     hp-ppd \
     hplip \
+    gnupg \
     avahi-daemon \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
